@@ -3,7 +3,7 @@ body {
   font-size: 18px;
   color: #404040;
   text-align: justify;
-  background-color: #bbbbbb;
+  background-color:rgb(255,255,255)/*#bbbbbb; */
 }
 p {
   line-height: 1.5;
