@@ -1,2 +1,2 @@
 # tzxiang.github.io
-Home page of Tian-Zhu Xiang
+Homepage of Tian-Zhu Xiang
