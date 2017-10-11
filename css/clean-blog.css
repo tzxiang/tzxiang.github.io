@@ -142,7 +142,7 @@ hr.small {
 .intro-header .site-heading,
 .intro-header .post-heading,
 .intro-header .page-heading {
-  padding: 100px 0 50px;
+  padding: 0px 0 0px;
   color: white; /* gray */
 }
 @media only screen and (min-width: 768px) {
