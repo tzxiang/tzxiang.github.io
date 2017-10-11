@@ -43,7 +43,7 @@ hr.small {
   border-color: white;
 }
 .navbar-custom {
-  background: white;
+  background: gray; /*white*/
   position: absolute;
   top: 0;
   left: 0;
