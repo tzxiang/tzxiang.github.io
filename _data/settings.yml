@@ -1,25 +1,28 @@
-title:  Lagrange
-tagline:  a minimalist Jekyll theme
+title:  T.-Z. Xiang
+tagline: Ph.D. of WHU 
 
+# Template from Lagrange
 # Authors documented under _data
 
 # Change to true for Disqus comments
 disqus:
   comments: false
-  disqus_shortname: 'https-lenpaul-github-io-lagrange'
+  disqus_shortname: 'https-tzxiang-github-io'
 
-google-ID: 'UA-80213386-1'
+google-ID: #'UA-80213386-1'
 
 menu:
 - {name: 'About', path: 'menu', url: 'about.html'}
-- {name: 'Writing', path: 'menu', url: 'writing.html'}
+#- {name: 'Writing', path: 'menu', url: 'writing.html'}
 - {name: 'Contact', path: 'menu', url: 'contact.html'}
 
 social:
-- {icon: 'github', link: 'https://www.github.com/lenpaul'}
-- {icon: 'twitter', link: 'https://twitter.com/paululele'}
-- {icon: 'linkedin', link: 'http://www.linkedin.com/in/lenpaul/'}
-- {icon: 'envelope', link: 'mailto:l.nguyen.paul@gmail.com'}
+- {icon: 'github', link: 'https://www.tzxiang.github.io'}   
+- {icon: 'twitter', link: ''}
+- {icon: 'linkedin', link: ''}
+- {icon: 'envelope', link: 'mailto:tzx@gmail.com'}
 - {icon: 'rss-square', link: 'feed.xml'}
+
+# github: https://github.com/tzxiang/
 
 # Available social icons are powered by Font Awesome, so you can use any icon that they offer
