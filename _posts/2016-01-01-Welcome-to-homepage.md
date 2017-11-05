@@ -4,13 +4,6 @@ title: "Welcome to homepage!"
 author: "T.-Z. Xiang"
 categories: journal
 tags: [documentation,sample]
-<!--
-image:
-  feature: mountains.jpg
-  teaser: mountains-teaser.jpg
-  credit: Death to Stock Photo
-  creditlink: ""
--->
 ---
 
 ### Getting Started
