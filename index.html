@@ -1,41 +1,323 @@
----
-layout: home
-title: Home
----
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!--
+	<meta name="计算视觉与摄影测量研究组">
+	<meta name="description" content="计算视觉与摄影测量研究组" />
+	<meta name="keywords" content="武汉大学, 测绘遥感信息工程国家重点实验室, 夏桂松，计算与摄影测量视觉研究组" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	-->
+	<title>T.-Z. Xiang | WHU </title>
+	<link rel="shortcut icon" href="./favicon.ico">
+	<link rel="icon" href="./favicon.ico">
+	<link rel="bookmark" href="./favicon.ico">
 
 
-{% for post in paginator.posts %}
-<div class="posts">
-  <h1>
-    <a href="{{ site.github.url }}{{ post.url }}">{{ post.title }}</a>
-  </h1>
-  {% if post.image.teaser %}
-    <a href="{{ site.github.url }}{{ post.url }}"><img src="{{ site.github.url }}/assets/img/{{ post.image.teaser }}"></a>
-  {% endif %}
-  <!--
-  <p>
-    {{ post.content | strip_html | truncate: 350 }} <a href="{{ site.github.url }}{{ post.url }}">Read more</a>
-    <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i> {{ post.date | date_to_string }} - <i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</span>
-  </p>
-  -->
-</div>
-{% endfor %}
+  
+
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<!-- <link rel="shortcut icon" href="favicon.ico"> -->
+	
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/bootstrap2.css">
+	<link rel="stylesheet" href="css/icomoon.css">
+
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" type="text/css" href="css/speakers.css" />
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+	<link rel="stylesheet" href="css/style2.css">
+	<style rel="stylesheet" type="text/css">
+         #rright{
+         float:right;
+		 color:#9b9b9b;
+		 margin-right:15px;
+         }
+	</style>
+
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+	</head>
+	<body class="boxed">
+	<!-- Loader -->
+	<div class="fh5co-loader"></div>
+
+	<div id="wrap">
+
+	<div id="fh5co-page">
+		<!-- 开头图片-->
+	   
+		
+		<!-- Header -->
+		<!-- 
+		<header id="fh5co-header" role="banner">
+			<div class="container border">
+				<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle dark"><i></i></a>
+<!--<div id="fh5co-logo"><a href="index.html"><img src="images/logo.jpg" alt="Free HTML5 Website Template"></a></div> --> <!--
+				<nav id="fh5co-main-nav" role="navigation">
+					<ul>
+						<li class="active"><a href="xiangtianzhu_En.html">Home</a></li>
+						<li><a href="xiangtianzhu_publications_En.html">Publications</a></li>
+						<li><a href="xiangtianzhu_resume_En.html">Curriculum Vitate</a></li>
+						<li><a href="xiangtianzhu.html">中文版</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header> 
+		-->
+		<header id="fh5co-header" role="banner">
+			<div class="container border">
+				<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle dark"><i></i></a>
+				<nav id="fh5co-main-nav" role="navigation">
+					<ul>
+						<li class="active"><a href="index.html">Welcome - Homepage of T.-Z. Xiang</a></li>	
+						<li><a >中文版</a></li> <!-- href="xiangtianzhu.html" -->
+					</ul>
+				</nav>
+			</div>
+		</header>
+		
+		
+		<!-- Header -->
+
+		
+		<!-- Slider -->
+		
+		<div id="fh5co-intro" class="fh5co-section">
+			<div class="container ">
+				<div class="col-md-3-">
+					<a href="xiangtianzhu_En.html"><img src="images/photo/xiang.jpg" class="img-responsive img-bordered" width="80%"></a>
+				</div>
+				
+				
+				<p style="font-size:30px; font-weight:bold;">Tian-Zhu Xiang</p>
+				<br/>
+				<br/>
+				<p>I am currently a Ph.D. candidate in <a href="http://www.lmars.whu.edu.cn/en/">LIESMARS</a>, <a href="http://en.whu.edu.cn/">Wuhan University</a>, under the supervision of Prof. 
+				<a href="http://captain.whu.edu.cn/xia_En.html">Gui-Song Xia</a> & Prof. <a href="http://www.lmars.whu.edu.cn/prof_web/zhangliangpei/rs/index.html">Liangpei Zhang</a>. 
+				My current research concentrates on image/video alignment and stitching, computational photography, computer vision, etc. My E-mail is <em>tzxiang@whu.edu.cn</em>.<p>
+	            
+	      
+			</div>
+			
+			<div class="container">
+			    <hr style="height:0px;border:none;border-top:1px solid #d9d9d9;" />
+				<h3  id = "phd" style="text-align:left;">Educations</h3>
+				<ul>	
+                    <li>2015.09 – Present: Ph.D. candidate in Photogrammetry and Remote Sensing, Wuhan University</li>
+                    <li>2012.09 – 2015.06: M.Sc in Photogrammetry and Remote Sensing, Wuhan University</li>
+                    <li>2008.09 – 2012.06: B.Sc in Geodesy and Geomatics, Wuhan University</li>                
+				</ul>
+				
+				<!-- <hr style="height:1px;border:none;border-top:1px solid #d9d9d9;" />
+				<h3  id = "phd" style="text-align:left;">Honors and awards</h3>
+				<ul>	
+				    <li>2016: Second Prize Scholarship for Graduate Students, Wuhan University</li>   
+					<li>2015: Second Prize Scholarship for Graduate Students, Wuhan University</li>
+					<li>2015: Outstanding Graduates Awards, Wuhan University</li>
+                    <li>2012: Outstanding Graduates Awards, Wuhan University</li>				
+				</ul> -->
+				
+				
+				<hr style="height:1px;border:none;border-top:1px solid #d9d9d9;" />
+				<h3 style="text-align:left;">Publications</h3>
+				
+				<!-- <h3 id = "sci">Preprints</h3> -->
+				<!-- <h4><b><em>Preprints</em></b></h4> -->
+				<div><h4><b><span style="color:rgb(73,66,52);font-style:italic">Preprints</b></h4></div>
+				<ol reversed>
+					<li><b>A review of UAV-based remote sensing: techniques, applications and future.</b> [<a >PDF</a>].<br/>
+					T.-Z. Xiang, G.-S. Xia, Y. Lu, et al., 2017. </li>
+
+					<li><b>Image stitching by line-guided local warping with global similarity constraint</b> [<a href="https://arxiv.org/pdf/1702.07935.pdf">PDF</a>].<br/>
+					T.-Z. Xiang, G.-S. Xia, X. Bai, L. Zhang. arXiv:1702.07935, 2017. </li>
+				</ol>
+
+				
+				<br />
+				<!--<h4><b><em>Journal Articles</em></b></h4> -->
+				<div><h4><b><span style="color:rgb(73,66,52);font-style:italic">Journal articles</b></h4></div>
+				<!-- <ol reversed>
+					
+					<li><b>A fusion algorithm for infrared and visible images based on adaptive dual-channel unit-linking PCNN in NSCT domain</b> [<a href="papers/AFA.pdf">PDF</a>].<br/>
+					T.-Z. Xiang, L. Yan,  R. Gao.<br/>
+					<em>Infrared Physics & Technology</em>, 2015, 69:53-61.
+					</li>
+					
+					<li><b>Image Stitching Based on Anisotropic-Scale Junction</b> [<a href="http://www.signalpro.org.cn/CN/10.16798/j.issn.1003-0530.2017.04.002">PDF</a>].<br/>
+					T.-Z. Xiang, N. Xue, G.-S. Xia, L. Zhang.<br/>
+					<em>Journal of Signal Processing</em>, 2017, 33(4):465-471. (in Chinese)
+					</li>
+					
+				</ol> -->
+
+		
+				<table class="mytable" cellspacing="0" cellpadding="0">  <!-- mytable in style2.css -->
+					<tr><td width="30%"><img src="images/paper/xiangInfPhy4.png" class=" img-bordered"></td>
+					<td width="70%">
+					    <p><b>A Fusion Algorithm for Infrared and Visible Images Based on Adaptive Dual-channel Unit-linking PCNN in NSCT Domain.</b> [<a href="http://www.sciencedirect.com/science/article/pii/S1350449515000031">PDF</a>] </p>
+					    <p>Tianzhu Xiang, Li Yan,  Rongrong Gao. </p>
+					    <p><em>Infrared Physics & Technology, 2015, 69:53-61.</em></p>
+					</td></tr>
+					
+					<tr><td width="30%"><img src="images/paper/ccsp2017.png" class=" img-bordered"></td>
+					<td width="70%">
+					    <p><b>Image Stitching Based on Anisotropic-Scale Junction.</b> [<a href="http://www.signalpro.org.cn/CN/10.16798/j.issn.1003-0530.2017.04.002">PDF</a>] </p>
+					    <p>T.-Z. Xiang, N. Xue, G.-S. Xia, L. Zhang.</p>
+					    <p><em>Journal of Signal Processing, 2017, 33(4): 465-471. (in Chinese)</em></p>
+					</td></tr>
+					
+					<tr><td width="30%"><img src="images/paper/wuda16.png" class=" img-bordered"></td>
+					<td width="70%">
+					    <p><b>Region Feature Based Multi-scale Fusion Method for Thermal Infrared and Visible Images.</b> [<a href="http://ch.whu.edu.cn/CN/abstract/abstract5773.shtml">PDF</a>] </p>
+					    <p>T.-Z. Xiang, R. Gao, L. Yan, Z. Xu.</p>
+					    <p><em>Geomatics and Information Science of Wuhan University, 2017, 42(7): 911-917. (in Chinese)</em></p>
+					</td></tr>
+					
+					<tr><td width="30%"><img src="images/paper/ceke16.png" class=" img-bordered"></td>
+					<td width="70%">
+					    <p><b>Multi-Scale Fusion of Infrared and Visible Images Based on PCNN.</b> [<a href="http://jfjc.chinajournal.net.cn/WKE/WebPublication/paperDigest.aspx?paperID=2e25d4be-4636-410c-aaf8-8f40cd0c746b">PDF</a>] </p>
+					    <p>T.-Z. Xiang, R. Gao, L. Yan.</p>
+					    <p><em>Journal of Geomatics Science and Technology, 2016, 33(3): 273-278. (in Chinese)</em></p>
+					</td></tr>
+					
+					<tr><td width="30%"><img src="images/paper/dianzi16.png" class=" img-bordered"></td>
+					<td width="70%">
+					    <p><b>Fusion of Infrared and Visible Images Based on Edge Feature and Adaptive PCNN in NSCT Domain.</b> [<a href="http://manu57.magtech.com.cn/Jwk_dzxb/CN/abstract/abstract9554.shtml">PDF</a>] </p>
+					    <p>L. Yan, T.-Z. Xiang</p>
+					    <p><em>Chinese Journal of Electronics, 2016, 44(4): 761-766. (in Chinese)</em></p>
+					</td></tr>
+					
+				</table> 
+				
+				
+				<!-- <table width="100%" border="0" cellspacing="20" cellpadding="10" style="margin-left:30px; border-collapse:separate; border-spacing:0px 20px;">
+				<tr><td  width="30%"><img src="images/paper/xiangInfPhy4.png" width="90%" ></td>
+                    <td  width="70%"><b>Narrative Collage of Image Collections by Scene Graph Recombination.</b> [<a >PDF</a>]
+                        <p>Fei Fang, Miao Yi, Hui Feng, Shenghong Hu, Chunxia Xiao</p>
+                        <p><em>IEEE Transactions on Visualization and Computer Graphics, 2017, accepted. </em></p>
+					</td>
+                </tr>				
+				<tr><td  width="30%"><img src="images/paper/xiangInfPhy4.png" width="90%"></td>
+                    <td  width="70%"><b>Narrative Collage of Image Collections by Scene Graph Recombination.</b> [<a >PDF</a>]
+                        <p>Fei Fang, Miao Yi, Hui Feng, Shenghong Hu, Chunxia Xiao</p>
+                        <p><em>IEEE Transactions on Visualization and Computer Graphics, 2017, accepted. </em></p>
+					</td>
+                </tr>				
+				</table>  -->
 
 
-<!-- Pagination links -->
-<!--
-<div class="pagination">
-  {% if paginator.next_page %}
-    <a class="pagination-button pagination-active" href="{{ site.github.url }}{{ paginator.next_page_path }}" class="next">Older</a>
-  {% else %}
-    <span class="pagination-button">Older</span>
-  {% endif %}
 
-  {% if paginator.previous_page %}
-    <a class="pagination-button pagination-active" href="{{ site.baseurl }}{{ paginator.previous_page_path }}">Newer</a>
-    {% else %}
-      <span class="pagination-button">Newer</span>
-  {% endif %}
+				<br />
+				<!-- <h4><b><em>Conference proceedings</em></b></h4> -->
+				<div><h4><b><span style="color:rgb(73,66,52);font-style:italic">Conference proceedings</b></h4></div>
 
-</div>
--->
+				<!-- <ol reversed>
+					<li><b>Locally warping-based image stitching by imposing line constrains</b> [<a href="papers/CON_LWBI.pdf">PDF</a>].<br/>
+					T. Xiang, G.-S. Xia and L. Zhang. <br/>
+					IEEE International Conference on Pattern Recognition (ICPR): Cancun, Mexico, 2016.  
+					</li>
+
+					<li><b>Image stitching with perspective-preserving warping</b> [<a href="papers/CON_XIANG.pdf">PDF</a>].<br/>
+					T. Xiang, G.-S. Xia, L. Zhang. <br/>
+					ISPRS 2016 - XXIII ISPRS Congress: Prague, Czech Republic, 2016
+					</li>
+
+					<li><b>Fusion of visible and infrared images based on spiking cortical model in nonsubsampled contourlet transform domain</b> [<a href="papers/CON_FOVA.pdf">PDF</a>].<br/>
+					X. Liu, T. Xiang.<br/>
+					IEEE International Congress on Image and Signal Processing (CISP), 2014:747-753.
+					</li>
+				</ol> -->
+				
+					
+				<table class="mytable" cellspacing="0" cellpadding="0" >
+				
+					<tr><td width="30%"><img src="images/paper/xiangICPR3.png" class=" img-bordered"></td>
+					<td width="70%">
+					    <p><b>Locally warping-based image stitching by imposing line constrains.</b> [<a href="http://captain.whu.edu.cn/papers/CON_LWBI.pdf">PDF</a>] </p>
+					    <p>Tianzhu Xiang, Gui-Song Xia, Liangpei Zhang and Ningning Huang.</p>
+					    <p><em>IEEE International Conference on Pattern Recognition (ICPR): Cancun, Mexico, 2016.</em><p>
+					</td></tr>
+
+					<tr><td width="30%"><img src="images/paper/xiangISPRS.jpg" class=" img-bordered"></td>
+					<td width="70%">
+					    <p><b>Image stitching with perspective-preserving warping.</b> [<a href="http://captain.whu.edu.cn/papers/CON_XIANG.pdf">PDF</a>]</p>
+					    <p>Tianzhu Xiang, Gui-Song Xia, Liangpei Zhang.</p>
+					    <p><em>ISPRS Annals of Photogrammetry Remote Sensing & Spatial Informa, 2016, III-3.</em></p>
+					</td></tr>
+										
+					<tr><td width="30%"><img src="images/paper/xiangCISP.png" class=" img-bordered"></td>
+					<td width="70%">
+					    <p><b>Fusion of visible and infrared images based on spiking cortical model in nonsubsampled contourlet transform domain.</b> [<a href="http://captain.whu.edu.cn/papers/CON_FOVA.pdf">PDF</a>]</p>
+					    <p>Xinyu Liu, Tianzhu Xiang.</p>
+					    <p><em>IEEE International Congress on Image and Signal Processing (CISP), 2014:747-753.</em></p>
+					</td></tr>
+					
+				</table>
+				
+			</div>
+			<br/><br/>
+	
+
+		<!-- <footer id="fh5co-footer" role="contentinfo">
+			<div class="container" style="margin-left:27px;">
+			
+				<div class="row">
+					<div class="col-md-12">
+						<div class="fh5co-copyright">
+						   <center>
+								<p >&copy; Team of Computational and Photogrammetric Vision, LIESMARS, Wuhan University</p>
+							</center>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer> -->
+		
+	</div>
+	</div>
+	
+
+	
+	<p align="center">
+	<a href="http://www.reliablecounter.com" target="_blank"><img src="http://www.reliablecounter.com/count.php?page=captain.whu.edu.cn&digit=style/plain/18/&reloads=0" alt="" title="" border="0"></a><br />
+	<a href="http://" target="_blank" style="font-family: Geneva, Arial; font-size: 9px; color: #330010; text-decoration: none;">Visits since 2017</a>
+	</p>
+	
+    <p align="center">Copyright &#169; 2017-2017, Tian-Zhu Xiang, Last modified: 2017.12.1 <a href="index.html/#Top">&nbsp;</a></p>
+    <p align="center"><a href="index.html">Top&nbsp;&nbsp;</a></p>
+
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-chevron-down"></i></a>
+	</div>
+	
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.easing.1.3.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/main.js"></script>
+
+	</body>
+</html>
+
