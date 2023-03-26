@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html>
+<meta property='og:title' content='Feature Shrinkage Pyramid for Camouflaged Object Detection with Transformers, CVPR2023'/>
+<meta property='og:image' content=''/>
+<meta property='og:description' content='Feature Shrinkage Pyramid for Camouflaged Object Detection with Transformers. CVPR2023'/>
+<meta property='og:url' content=''/> <!--url for release-->
+<meta property='og:image:width' content='1200' />
+<meta property='og:image:height' content='663' />
+<!-- TYPE BELOW IS PROBABLY: 'website' or 'article' or look on https://ogp.me/#types -->
+<meta property="og:type" content='website'/>
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9VZKE74FPW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-9VZKE74FPW');
+</script>
+  <meta charset="utf-8">
+  <meta name="description" content="Feature Shrinkage Pyramid for Camouflaged Object Detection with Transformers">
+  <meta name="keywords" content="FSPNet, Camouflaged Object Detection, COD, Object Segmentation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Feature Shrinkage Pyramid for Camouflaged Object Detection with Transformers</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/tab_gallery.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+  <!-- <link rel="stylesheet" href="juxtapose/css/juxtapose.css"> --> <!--For sliding window to compare two images simultaneously-->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <script src="./static/js/magnifier.js"></script>
+  <link href="https://fonts.cdnfonts.com/css/menlo" rel="stylesheet">
+  <link rel="stylesheet" href="./static/css/image_card_fader.css">
+  <link rel="stylesheet" href="./static/css/image_card_slider.css">
+
+</head>
+
+<style>
+  @import url('https://fonts.cdnfonts.com/css/menlo');
+</style>
+
+<body>
+  <section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-2 publication-title">Feature Shrinkage Pyramid for Camouflaged Object Detection with Transformers</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://github.com/ZhouHuang23/">Zhou Huang</a><sup>1,2</sup><sup>†</sup>,</span>
+            <span class="author-block">
+              <a href="https://www.gla.ac.uk/schools/computing/staff/hangdai/">Hang Dai</a><sup>3</sup><sup>†</sup>,</span>
+            <span class="author-block">
+              <a href="https://tzxiang.github.io/">Tian-Zhu Xiang</a><sup>4</sup><sup>*</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=xmWZWwoAAAAJ&hl=en">Shuo Wang</a><sup>5</sup>,
+            </span>
+            <span class="author-block">
+              <a href="">Huai-Xin Chen</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://sites.google.com/site/firmamentqj/">Jie Qin</a><sup>6</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://mbzuai.ac.ae/study/faculty/huan-xiong/">Huan Xiong</a><sup>7</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Sichuan Changhong Electric Co., Ltd.,</span>
+            <span class="author-block"><sup>2</sup>UESTC,</span>
+            <span class="author-block"><sup>3</sup>University of Glasgow,</span><br>
+            <span class="author-block"><sup>4</sup>G42,</span>
+            <span class="author-block"><sup>5</sup>ETH Zurich,</span>
+            <span class="author-block"><sup>6</sup>CCST, NUAA,</span>
+            <span class="author-block"><sup>7</sup>MBZUAI</span>
+          </div>
+
+
+          <div class="is-size-5 publication-venue">
+            in CVPR 2023
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">  <!--static/paper/***.pdf-->
+                <a href="" 
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/ZhouHuang23/FSPNet"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- BibTex Link. -->
+              <span class="link-block">
+                <a href="#bibtex"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-obp"></i>
+                  </span>
+                  <span>BibTex</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!--Opening/Intro-->
+<section class="hero is-light is-small"> <!-- "is-light is-small" -> teaser -->
+  <div class="subtitle has-text-centered">
+    <div class="hero-body">
+      <img src='static/images/intro-visual-comparison.png' width="370" height="200",id="teaser-1"> 
+      <img src='static/images/intro-decoder-comparison.png' width="720" height="340",id="teaser-2">
+      <h2 class="subtitle has-text-centered">
+        <p>
+          <small> Left: Visual comparison of COD in different challenging scenarios. Right: Different types of decoding structures 
+          <br>for object segmentation: (a) U-shaped decoding structure, (b) dense integration strategy, (c) feedback 
+          <br>refinement strategy, (d) separate decoding of low-level and high-level features, and (e) our decoding structure.
+        </p>
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- -------------------------------------------- -->
+<!--Template for addition of images and videos-->
+<!-- 
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop has-text-centered">
+      <h2 class="title is-3">Sub-title</h2>
+      <div class="content has-text-justified">
+        <p>
+          Description. Comments: Below is to show 3 images in the same place by switching left and right. 
+          <br> 
+        </p>
+      </div>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-t2i0">
+          <img id="myt2i0" src="./static/images/img1.png"
+          class="interpolation-image"/>
+        </div>
+        <div class="item item-t2i1">
+          <img id="myt2i1" src="./static/images/img2.jpg"
+          class="interpolation-image"/>
+        </div>
+        <div class="item item-t2i1">
+          <img id="myt2i1" src="./static/images/img3.jpg"
+          class="interpolation-image"/>
+        </div>
+      </div>
+    </div>
+  </div>
+-->
+
+<!--
+  <div class="container is-max-desktop has-text-centered">
+    <h2 class="title is-3">Sub-Title</h2>
+    <div class="has-text-justified">
+      <p>
+        Description. This is to show videos in two columns. 
+        <br>Description.
+      </p>
+    </div>
+    <br>
+    
+    <div class="columns is-centered">
+      
+      <div class="column">
+        <div class="content">
+          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/video1.mp4" type="video/mp4">
+          </video>
+          <div class="has-text-justified">
+          <p>
+            <b>Video title in bold.</b>
+            Text description for this video. 
+          </p>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="columns is-centered">
+          <div class="column content">
+            <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/video2.mp4"
+                      type="video/mp4">
+            </video>
+            <div class="has-text-justified">
+            <p>
+              <b>Video title in bold.</b>
+              Text description for this vide0.
+            </p>
+            </div>          
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+--> 
+
+<!-- 
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop has-text-centered">
+      <h2 class="title is-3">Sub-Title</h2>
+      <div class="has-text-justified">
+      <p>
+        Description. To show two images simultaneously by sliding the window (input & output images). Using juxtapose. Customized a show function at the end named "tab\_gallery\_click". 
+        <br>
+      </p>
+      </div>
+      <!- The expanding image container ->
+      <div class="tab_container">
+        <!- Close the image ->
+        <!- <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span> ->
+
+        <!- Expanded image ->
+        <div id="juxtapose-embed" data-startingposition="30%" data-animate="true">
+        </div>
+
+        <div>
+          <div id="juxtapose-hidden"></div>
+        </div>
+        
+        <!- Image text ->
+        <div id="imgtext"></div>
+      </div>
+
+      <!- The grid: four columns ->
+      <div class="tab_row">
+        <div class="tab_column">
+          <img src="./static/images/iguana_input.jpg" onclick="tab_gallery_click('iguana');">
+        </div>
+        <div class="tab_column">
+          <img src="./static/images/dog_input.jpg"  onclick="tab_gallery_click('dog');">
+        </div>
+        <div class="tab_column">
+          <img src="./static/images/turtle_input.jpg" onclick="tab_gallery_click('turtle');">
+        </div>
+        <div class="tab_column">
+          <img src="./static/images/kitten_input.jpg"  onclick="tab_gallery_click('kitten');">
+        </div>
+        <div class="tab_column">
+          <img src="./static/images/guy_input.jpg"  onclick="tab_gallery_click('guy');">
+        </div>
+        <div class="tab_column">
+          <img src="./static/images/boy_input.jpg"  onclick="tab_gallery_click('boy');">
+        </div>
+        <div class="tab_column">
+          <img src="./static/images/horse_input.jpg"  onclick="tab_gallery_click('horse');">
+        </div>
+        <div class="tab_column">
+          <img src="./static/images/pancake_input.jpg"  onclick="tab_gallery_click('pancake');">
+        </div>
+        <div class="tab_column">
+          <img src="./static/images/elephant_input.jpg"  onclick="tab_gallery_click('elephant');">
+        </div>
+        <div class="tab_column">
+          <img src="./static/images/plant_input.jpg"  onclick="tab_gallery_click('plant');">
+        </div>
+      </div> 
+    </div>
+  </div>
+</section> 
+-->
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Vision transformers have recently shown strong global context modeling capabilities in camouflaged object detection. 
+            However, they suffer from two major limitations: less effective locality modeling and insufficient feature aggregation 
+            in decoders, which are not conducive to camouflaged object detection that explores subtle cues from indistinguishable backgrounds. 
+            <br><br>
+            To address these issues, in this paper, we propose a novel transformer-based Feature Shrinkage Pyramid Network (<i>FSPNet</i>), 
+            which aims to hierarchically decode locality-enhanced neighboring transformer features through progressive shrinking for camouflaged 
+            object detection. Specifically, we propose a nonlocal token enhancement module (NL-TEM) that employs the non-local mechanism to 
+            interact neighboring tokens and explore graph-based high-order relations within tokens to enhance local representations of transformers. 
+            Moreover, we design a feature shrinkage decoder (FSD) with adjacent interaction modules (AIM), which progressively aggregates adjacent 
+            transformer features through a layer-bylayer shrinkage pyramid to accumulate imperceptible but effective cues as much as possible for 
+            object information decoding. 
+            <br><br>
+            Extensive quantitative and qualitative experiments demonstrate that the proposed model significantly 
+            outperforms the existing 24 competitors on three challenging COD benchmark datasets under six widely-used evaluation metrics.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+
+<section class="section">
+  
+  <div class="container is-max-desktop">
+    
+    <!--/ Method. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3 has-text-centered">Method</h2>
+
+        <h3 class="title is-4">FSPNet architecture</h3>
+        
+        <div class="content has-text-centered">
+            <img src="./static/images/FSPNet_architecture.png" width="100%">
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            <b>Overall architecture of the proposed FSPNet</b>. It consists of three key components: a ViT-based encoder, a non-local token
+              enhancement module (NL-TEM) and a feature shrinkage decoder (FSD) with adjacent interaction modules (AIM). 
+              Specifically, the input image is first serialized into tokens as input to a transformer encoder to model global contexts using 
+              the self-attentive mechanism. After that, to strengthen the local feature representation within tokens, a non-local token enhancement module (NL-TEM) 
+              is designed to perform feature interaction and exploration between and within tokens and convert the enhanced tokens from the encoder space to the 
+              decoder space for decoding. In the decoder, to merge and retain subtle but critical cues as much as possible, we design a feature shrinkage decoder (FSD) 
+              to progressively aggregates adjacent features through layer-bylayer shrinkage to decode object information. 
+          </p>
+        </div>
+        
+        <!-- Template -->
+        <!--
+        <h3 class="title is-4">Sub-title</h3>
+        <div class="content has-text-centered">
+            <img src="./static/images/***.jpg" width="100%">
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            Description.
+          </p>
+        </div>
+        -->
+      </div>
+    </div>
+
+
+    <br><br>
+
+    <!--/ Experiments. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3 has-text-centered">Experiments & Results</h2>
+
+        <h3 class="title is-4">Quantitative Comparisons</h3>
+        
+        <div class="content has-text-justified"> <!--or "has-text-centered"-->
+          <p>
+            Quantitative comparison with 24 SOTA methods on three benchmark datasets. The best and second best are bolded and underlined for highlighting, respectively.
+          </p>
+        </div>
+        <div class="content has-text-centered">
+            <img src="./static/images/quantitative_results.png" width="80%">
+        </div>
+
+
+
+        <h3 class="title is-4">Visual Comparisons</h3>
+        
+        <div class="content has-text-justified">
+          <p>
+            Visual comparison with some representative SOTA models in challenging scenarios.
+          </p>
+        </div>
+        <div class="content has-text-centered">
+            <img src="./static/images/visual_comparison.png" width="80%">
+        </div>
+
+
+        <div class="content has-text-justified">
+          <p>
+            More visual results on different datasets.
+          </p>
+        </div>
+        <div class="container is-max-desktop">
+          <div id="results-carousel" class="carousel results-carousel">
+            <div class="item item-small has-text-centered">
+              <img src="./static/images/small.png" width="60%"
+              class="interpolation-image"/>
+            </div>
+            <div class="item item-big has-text-centered">
+              <img src="./static/images/big.png" width="60%"
+              class="interpolation-image"/>
+            </div>
+            <div class="item item-obscured has-text-centered">
+              <img src="./static/images/obscured.png" width="60%"
+              class="interpolation-image"/>
+            </div>
+            <div class="item item-uncertain has-text-centered">
+              <img src="./static/images/uncertain.png" width="60%"
+              class="interpolation-image"/>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <br><br>
+
+    <!--/ Others. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3 has-text-centered">Related Works</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            <li>Youwei Pang, Xiaoqi Zhao, Tian-Zhu Xiang, Lihe Zhang, and Huchuan Lu. <a href="https://arxiv.org/abs/2203.02688">Zoom in and out: A mixed-scale triplet network for camouflaged object detection.</a> Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2022.</li><br>
+            <li>Yujia Sun, Shuo Wang, Chenglizhao Chen, and Tian-Zhu Xiang.  <a href="https://arxiv.org/abs/2207.00794">Boundary-guided camouflaged object detection.</a> Proceedings of the Thirty-First International Joint Conference on Artificial Intelligence (IJCAI), 2022.</li><br>    
+            <li>Deng-Ping Fan, Ge-Peng Ji, Ming-Ming Cheng, and Ling Shao. <a href="https://arxiv.org/abs/2102.10274">Concealed object detection.</a> IEEE Transactions on Pattern Analysis and Machine Intelligence, 2022.</li><br>
+            <li>Deng-Ping Fan, Ge-Peng Ji, Guolei Sun, Ming-Ming Cheng, Jianbing Shen, and Ling Shao. <a href="https://openaccess.thecvf.com/content_CVPR_2020/html/Fan_Camouflaged_Object_Detection_CVPR_2020_paper.html">Camouflaged object detection.</a> Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2020.</li><br>
+            <li>Alexey Dosovitskiy, Lucas Beyer, Alexander Kolesnikov, Dirk Weissenborn, Xiaohua Zhai, Thomas Unterthiner, Mostafa Dehghani, Matthias Minderer, Georg Heigold, Sylvain Gelly, Jakob Uszkoreit, Neil Houlsby. 
+              <a href="https://arxiv.org/abs/2010.11929">An image is worth 16x16 words: Transformers for image recognition at scale.</a> International Conference on Learning Representations (ICLR), 2021.</li><br>
+            <li>Hugo Touvron, Matthieu Cord, Matthijs Douze, Francisco Massa, Alexandre Sablayrolles, and Herve Jegou. <a href="https://arxiv.org/abs/2012.12877">Training data-efficient image transformers & distillation through attention.</a> 
+              International Conference on Machine Learning (ICML), 2021.</li><br>
+            <li>Please find more related resources for COD <a href="https://github.com/visionxiang/awesome-camouflaged-object-detection">here</a>.</li>
+          </p>
+        </div>
+      </div>
+    </div>
+
+        
+
+    <!--/ Animation. -->
+    <!--Using juxtapose: customized a show function at the end named "Click"-->
+    <!--/ Reference: https://mingukkang.github.io/GigaGAN/ -->
+    <!-- 
+    <h3 class="title is-3">Click images to see more examples</h3>
+    <div id="player" style="cursor:pointer;">
+    </div>
+
+    <script>
+      class ClickListener {
+        constructor(images) {
+          this.rootElement = document.querySelector( "#player" );
+          this.element = document.createElement("img");
+          this.rootElement.appendChild(this.element);
+          this.images = images
+          this.idx = 0
+          this.k = 0;
+          this.init()
+        }
+
+        init() {
+          this.element.src = this.images[this.idx]
+          this.element.style.width = `320px`;
+          this.element.style.height = `320px`;
+          this.element.onclick = this.nextImage.bind(this); 
+        }
+
+        nextImage() {
+          this.idx++;
+          if(this.idx >= this.images.length) {
+            this.idx = 0;
+          }
+            setTimeout(this.identity(), 300); setTimeout(this.swapping(), 300);
+          }
+  
+
+        swapping() {
+          this.k += 90;
+          this.element.style.transitionDuration = "0.5s";
+          this.element.style.transform = "rotatey(" + this.k + "deg)";
+          this.element.src = this.images[this.idx];
+        }
+
+        identity() {
+          this.k += 90;
+          this.element.style.transitionDuration = "0.5s";
+          this.element.style.transform = "rotatey(" + this.k + "deg)";
+          this.element.src = this.element.src;
+        }
+        }
+
+      class ClickListener1 {
+      constructor(images) {
+        this.rootElement = document.querySelector( "#player" );
+        this.element = document.createElement("img");
+        this.rootElement.appendChild(this.element);
+        this.images = images
+        this.idx = 0
+        this.init()
+      }
+    
+      init() {
+        this.element.src = this.images[this.idx]
+        this.element.style.width = `320px`;
+        this.element.style.height = `50px`;
+        this.element.onclick = this.nextImage.bind(this)
+      }
+    
+      nextImage() {
+        this.idx++;
+        if(this.idx >= this.images.length) {
+          this.idx = 0;
+        }
+        this.element.src = this.images[this.idx]
+        }
+      }
+    </script>
+
+    <script>
+    new ClickListener(['./static/images/car0.jpg', './static/images/car1.jpg', './static/images/car2.jpg', './static/images/car3.jpg', './static/images/car4.jpg'])
+    new ClickListener(['./static/images/galaxy0.jpg', './static/images/galaxy1.jpg', './static/images/galaxy2.jpg', './static/images/galaxy3.jpg', './static/images/galaxy4.jpg'])
+    new ClickListener(['./static/images/newton0.jpg', './static/images/newton1.jpg', './static/images/newton2.jpg', './static/images/newton3.jpg', './static/images/newton4.jpg',])
+    new ClickListener1(['./static/images/caption0_0.png',])
+    new ClickListener1(['./static/images/caption0_1.png',])
+    new ClickListener1(['./static/images/caption0_2.png',])
+    new ClickListener(['./static/images/sea0.jpg', './static/images/sea1.jpg', './static/images/sea2.jpg', './static/images/sea3.jpg', './static/images/sea4.jpg'])
+    new ClickListener(['./static/images/candle2.jpg', './static/images/candle1.jpg', './static/images/candle3.jpg', './static/images/candle0.jpg', './static/images/candle4.jpg'])
+    new ClickListener(['./static/images/bread0.jpg', './static/images/bread1.jpg', './static/images/bread2.jpg', './static/images/bread3.jpg', './static/images/bread4.jpg',])
+    new ClickListener1(['./static/images/caption1_0.png',])
+    new ClickListener1(['./static/images/caption1_1.png',])
+    new ClickListener1(['./static/images/caption1_2.png',])
+    new ClickListener(['./static/images/alps0.jpg', './static/images/alps1.jpg', './static/images/alps2.jpg', './static/images/alps3.jpg', './static/images/alps4.jpg'])
+    new ClickListener(['./static/images/light0.jpg', './static/images/light1.jpg', './static/images/light2.jpg', './static/images/light3.jpg', './static/images/light4.jpg'])
+    new ClickListener(['./static/images/castle0.jpg', './static/images/castle1.jpg', './static/images/castle2.jpg', './static/images/castle3.jpg', './static/images/castle4.jpg'])
+    new ClickListener1(['./static/images/caption2_0.png',])
+    new ClickListener1(['./static/images/caption2_1.png',])
+    new ClickListener1(['./static/images/caption2_2.png',])
+    </script>
+    -->
+
+
+  </div>
+</section>
+
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title"><a id="bibtex">BibTeX</a></h2>
+    <pre><code>@inproceedings{Huang2023Feature,
+    author    = {Huang, Zhou and Dai, Hang and Xiang, Tian-Zhu and Wang, Suo and Chen, Huai-Xin and Qin, Jie and Xiong, Huan},
+    title     = {Feature Shrinkage Pyramid for Camouflaged Object Detection with Transformers},
+    booktitle = {IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    year      = {2023}
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            Website adapted from the following <a href="https://github.com/nerfies/nerfies.github.io">source code</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<!-- juxtapose: for sliding window to compare two images simultaneously -->
+
+<!-- 
+<script src="juxtapose/js/juxtapose.js"></script>
+
+<script>
+var slider;
+let origImages = [
+  {"src": "./static/images/iguana_input.jpg", "label": "Input Photos or Artworks (128px)",},
+  {"src": "./static/images/iguana_output.jpg", "label": "Upsampled by GigaGAN (4K)",}
+];
+let origOptions = {
+    "makeResponsive": true,
+    "showLabels": true,
+    "mode": "horizontal",
+    "showCredits": true,
+    "animate": true,
+    "startingPosition": "50"
+};
+
+const juxtaposeSelector = "#juxtapose-embed";
+const transientSelector = "#juxtapose-hidden";
+
+
+function tab_gallery_click(name) {
+  // Get the expanded image
+  let inputImage = {
+    label: "Input Photos or Artworks (128px)",
+  };
+  let outputImage = {
+    label: "Upsampled by GigaGAN (4K)",
+  };
+
+  inputImage.src = "./static/images/".concat(name, "_input.jpg")
+  outputImage.src = "./static/images/".concat(name, "_output.jpg")
+
+  let images = [inputImage, outputImage];
+  let options = slider.options;
+  options.callback = function(obj) {
+      var newNode = document.getElementById(obj.selector.substring(1));
+      var oldNode = document.getElementById(juxtaposeSelector.substring(1));
+      console.log(obj.selector.substring(1));
+      console.log(newNode.children[0]);
+      oldNode.replaceChild(newNode.children[0], oldNode.children[0]);
+      //newNode.removeChild(newNode.children[0]);  
+  };
+  
+  slider = new juxtapose.JXSlider(transientSelector, images, options);
+};
+
+
+(function() {
+    slider = new juxtapose.JXSlider(
+        juxtaposeSelector, origImages, origOptions);
+    //document.getElementById("left-button").onclick = replaceLeft;
+    //document.getElementById("right-button").onclick = replaceRight;
+})();
+  // Get the image text
+  var imgText = document.getElementById("imgtext");
+  // Use the same src in the expanded image as the image being clicked on from the grid
+  // expandImg.src = imgs.src;
+  // Use the value of the alt attribute of the clickable image as text inside the expanded image
+  imgText.innerHTML = name;
+  // Show the container element (hidden with CSS)
+  // expandImg.parentElement.style.display = "block";
+
+$(".flip-card").click(function() {
+            console.log("fading in")
+            div_back = $(this).children().children()[1]
+            div_front = $(this).children().children()[0]
+            // console.log($(this).children("div.flip-card-back"))
+            console.log(div_back)
+            $(div_front).addClass("out");
+            $(div_front).removeClass("in");
+
+            $(div_back).addClass("in");
+            $(div_back).removeClass("out");
+
+});
+
+$(".flip-card").mouseleave(function() {
+            console.log("fading in")
+            div_back = $(this).children().children()[1]
+            div_front = $(this).children().children()[0]
+            // console.log($(this).children("div.flip-card-back"))
+            console.log(div_back)
+            $(div_front).addClass("in");
+            $(div_front).removeClass("out");
+
+            $(div_back).addClass("out");
+            $(div_back).removeClass("in");
+
+}); 
+-->
+
+
+
+</script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>    
+
+
+</body>
+</html>
