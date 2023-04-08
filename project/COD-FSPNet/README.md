@@ -5,7 +5,7 @@ This is the repository that contains source code for the [COD-FSPNet Project](ht
 ```bib
 @inproceedings{Huang2023Feature,
 title={Feature Shrinkage Pyramid for Camouflaged Object Detection with Transformers},
-author={Huang, Zhou and Dai, Hang and Xiang, Tian-Zhu and Wang, Suo and Chen, Huai-Xin and Qin, Jie and Xiong, Huan},
+author={Huang, Zhou and Dai, Hang and Xiang, Tian-Zhu and Wang, Shuo and Chen, Huai-Xin and Qin, Jie and Xiong, Huan},
 booktitle={IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
 year={2023}
 }
