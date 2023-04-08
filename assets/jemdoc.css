@@ -13,7 +13,8 @@ body {
 }
 */
 html {
-  background-color: #eeeeee; 
+  /* background-color: #eeeeee;  */
+  background-color: #ffffff;
 }
 
 body { 
@@ -21,7 +22,7 @@ body {
   color: #000;
   background-color: #ffffff; 
   text-align:left; /* for IE */
-  margin-top: 30px; 
+  margin-top: 60px;  /*30px*/
   margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
@@ -373,3 +374,110 @@ table.imgtable, table.imgtable td {
     border: none;
     text-align: left;
 }
+
+
+
+
+
+/*** ------------------------ ***/ 
+/*** ------------------------ ***/ 
+/*** ------------------------ ***/ 
+/* For Navigation Bar */
+
+
+/*** ------------------------ ***/ 
+/*** Setting for the whole page ***/
+/*** ------------------------ ***/ 
+nav {
+	margin-left: -50px;
+  	padding-top: 10px;
+  	padding-bottom: 30px;
+}
+
+/*** ------------------------ ***/ 
+/*** Setting for nav and footer ***/
+/*** ------------------------ ***/ 
+
+nav ul, footer ul {
+	font-family:'Helvetica', 'Arial', 'Sans-Serif';
+	padding: 0px;
+	list-style: none;
+	/* font-weight: bold; */ /*该区域内字体粗体*/
+}
+nav ul {
+	/*固定在头部*/
+	position: fixed;
+	top: 0;
+	width: 100%; /*width: 65%-70% / 900px*/
+	max-width: 900px;
+	margin-top: 0;
+  	padding-left:  60px;
+
+	/* 如果导航栏选项多，允许滚动 */
+	overflow: auto; 
+
+	/* 导航栏背景颜色 */
+	background-color: rgb(255, 255, 255);
+}
+nav ul li, footer ul li {
+	display: inline;
+	margin-right: 30px;
+	margin-left: 0px;
+}
+footer ul li a {
+	text-decoration: none;
+	/*footer文字颜色*/
+	color: #999;	
+}
+nav ul li a {
+	text-decoration: none;
+	/*导航栏文字颜色, e.g. #428bca*/
+	color: #527bbd;	
+
+	/*导航栏文字粗细和大小, 全大写*/
+	/* font-weight: 700;  */
+	font-size: 16px;
+	text-transform: uppercase; 
+
+	/*导航栏每个元素居中，选中后背景方框尺寸*/
+	/* display: block;
+	width: 60px;
+	height: 30px;
+	text-align: center;  */
+}
+nav ul li a:hover, footer ul li a:hover {
+	text-decoration: underline;
+}
+nav ul li a:hover {
+	/*鼠标移动到导航栏选项上修改背景颜色 */
+	background-color: #eeeded;
+}
+nav h1 {
+	font-size: 3em;
+	font-family:'Helvetica', 'Arial', 'Sans-Serif';
+}
+nav h3 { 
+	font-family: 'Montserrat', Helvetica, sans-serif; 
+	text-transform: uppercase; 
+	font-weight: normal; 
+}
+nav ul p {
+	font-size: 1.5em;
+	line-height: 1.4em;
+	color: #333;
+}
+footer {
+	border-top: 1px solid #d5d5d5;
+	font-size: .8em;
+}
+
+nav ul li ul.posts, footer ul li ul.posts { 
+	margin: 20px auto 40px; 
+	font-size: 1.5em;
+}
+
+nav ul li ul.posts li, footer ul li ul.posts li {
+	list-style: none;
+}
+/*--nav and footer--*/ 
+
