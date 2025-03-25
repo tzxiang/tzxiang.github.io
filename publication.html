@@ -9,6 +9,11 @@
     
     <!--<link href="static/bootstrap/css/bootstrap.css" rel="stylesheet">
     <link href="static/xin.css" rel="stylesheet">-->
+
+     <!-- FontAwesome icon -->
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+     <!-- Academicons icon (for Google Scholar icon) -->
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.2/css/academicons.min.css" rel="stylesheet"> 
     
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -43,7 +48,61 @@
     ul.social-icons li a {
             border: none;
     }
+
+    .body-text {
+      font-family: montserrat, sans-serif; 
+      font-weight: lighter;               
+      color: #333;                     
+    }
+
+    .body-items {
+      /* font-weight: lighter; */
+      color: #333;     
+      line-height: 1.6;
+    }
   </style>
+
+
+<style>
+
+  .container {
+    display: flex;          
+    flex-direction: column;     
+    justify-content: center; 
+    align-items: center;     
+    height: 0vh;         
+    text-align: center;         
+  }
+ 
+  .image {
+    max-width: 300px;          
+    border-radius: 12px;       
+    margin-bottom: 20px;       
+  }
+
+  .network-icon {
+    list-style: none;
+    display: flex; 
+    gap: 10px; 
+    padding: 0;
+  }
+
+  .network-icon li {
+    display: inline-block;
+  }
+
+  .big-icon {
+    font-size: 23px; 
+    color: #333; 
+    transition: color 0.3s;
+  } 
+
+  .big-icon:hover {
+    color: #0073e6; 
+  }
+
+</style>
+
 
 
   <body>
@@ -51,7 +110,7 @@
     <nav>
 			<ul>
 				<br>
-				<li style="float:left"><a href="index.html" style="color: #999; font-size:18px; font-family: Montserrat"><strong>Tian-Zhu Xiang</strong></a></li>
+				<li style="float:left"><a href="index.html" style="color: #999; font-size:20px; font-family: Montserrat"><strong>Tian-Zhu Xiang</strong></a></li>
 				<li style="float:right"><a href="./publication.html">Publications</a></li>
 				<li style="float:right"><a href="index.html">Home</a></li>
         <br><br><br><br>
@@ -72,12 +131,13 @@
             </div>
           </tr> -->
           <tr>
-            <td width="75%"> <!--width="650"-->
-              <!-- <div id="toptitle">
+            <td width="70%"> <!--width="650"-->
+               <!-- <div id="toptitle">
                 <h1 style="color: #000080; border-bottom: 0.5px dotted rgba(105, 105, 103, 0.6);">Tian-Zhu Xiang</h1>
-              </div>    -->
-              <p style="color: black; font-size:26">About</p>  <!--#4F6071-->
-              <p style="font-family: sans-serif;font-weight: lighter;font-size: 15px;">
+              </div>  --> 
+              <p style="color: black; font-size:2em; font-family: montserrat,sans-serif; font-weight: lighter;">About</p>  <!--#4F6071-->
+
+              <p style="font-family: sans-serif;font-weight: lighter; font-size: 16px;">
                 Tian-Zhu Xiang is working as a researcher and Technical Manager of Applied AI at <a href="https://www.bayanat.ai/" style="color: rgba(71,92,102,1);"><u>Space42</u></a>. 
                 Before that, he was a researcher at Inception Institute of Artificial Intelligence (IIAI). 
                 <!-- working with <a href="https://scholar.google.com/citations?user=4STFC1AAAAAJ&hl=en" style="color: rgba(71,92,102,1);"><u>Dr. Fan Zhu</u></a> and <a href="https://scholar.google.com/citations?user=z84rLjoAAAAJ&hl=zh-CN" style="color: rgba(71,92,102,1);"><u>Prof. Ling Shao</u></a>. -->
@@ -87,12 +147,20 @@
               <p style="font-family: sans-serif;font-weight: lighter;font-size: 15px;">   -->
                 His research mainly focuses on computer vision, remote sensing and medical image analysis. Specifically, he is interested in camouflaged scene understanding, visual saliency, medical image segmentation and remote sensing image analysis.
                 <!--His research interests includes computer vision, remote sensing and medical image analysis.-->
-              </p>
-             
+              </p> 
             </td>
 
             <td>
-              <img src="./images/xiang-potrait.png" style="border-style: none; border:.5rem solid rgba(255,255,255,.2); border-radius:50%; padding-left: 40px;" width="65%" />
+              <div class="container">
+                <img src="./images/xiang-potrait.png" style="border-style: none; border:.5rem solid rgba(255,255,255,.2); border-radius:50%; padding-left: 0px;" width="45%">
+            
+                <ul class="network-icon" aria-hidden="true">
+                  <li><a href="mailto:tianzhu.xiang19@gmail.com" aria-label="envelope"><i class="fas fa-envelope big-icon"></i></a></li>
+                  <li><a href="https://github.com/visionxiang" target="_blank" rel="noopener" aria-label="github"><i class="fab fa-github big-icon"></i></a></li>
+                  <li><a href="https://scholar.google.com/citations?user=5uQEWX0AAAAJ&hl=en" target="_blank" rel="noopener" aria-label="google-scholar"><i class="ai ai-google-scholar big-icon"></i></a></li>
+                  <li><a href="https://www.researchgate.net/profile/Tian-Zhu-Xiang" target="_blank" rel="noopener" aria-label="researchgate"><i class="fab fa-researchgate big-icon"></i></a></li>
+                </ul>
+              </div>
             </td> 
           </tr>
 
@@ -102,7 +170,7 @@
       
 
       <!-- Publications -->
-      <h2> 
+      <h2 style="font-family: montserrat, sans-serif; font-size: 1.8em; font-weight: lighter;"> 
         <a id="Publications" class = "anchor" href="#Publications">Publications (*: Corresponding, <sup>†</sup>Equal contributions)</a>
       </h2>
       <!-- Preprints -->
@@ -114,13 +182,14 @@
 
       <h3><a>Preprints</a></h3>
 
-      <ul>
+      <ul class="body-items">
 
         <li>
           <p>
             <b>Towards Real Zero-Shot Camouflaged Object Segmentation without Camouflaged Annotations</b><br>
             Cheng Lei, Jie Fan, Xinran Li, <span style = "text-decoration:underline;">Tian-Zhu Xiang</span>, Ao Li, Ce Zhu, Le Zhang<br>
             <i>arXiv Preprint</i>, 2025<br>
+            <p style="line-height:2"></p>
             <a href="https://arxiv.org/abs/2410.16953" target="_blank"><button class="link-button"><span>arXiv</span></button></a>
             <a href="https://github.com/R-LEI2536/ZSCOS-CaMF" target="_blank"><button class="link-button"><span>Code</span></button></a>
             <a href="javascript:toggleblock('lei2025towards_bib')"><button class="link-button"><span>BibTex</span></button></a>
@@ -152,6 +221,7 @@
             <b>ZoomNeXt: A Unified Collaborative Pyramid Network for Camouflaged Object Detection</b><br>
             Youwei Pang<sup>†</sup>, Xiaoqi Zhao<sup>†</sup>, <span style = "text-decoration:underline;">Tian-Zhu Xiang</span><sup>†</sup>, Lihe Zhang, Huchuan Lu<br>
             <i>IEEE Transactions on Pattern Analysis and Machine Intel ligence (TPAMI)</i>, 2024<br>
+            <p style="line-height:2"></p>
             <a href="https://ieeexplore.ieee.org/document/10568374" target="_blank"><button class="link-button"><span>PDF</span></button></a>
             <a href="https://arxiv.org/abs/2310.20208" target="_blank"><button class="link-button"><span>arXiv</span></button></a>
             <a href="https://github.com/lartpang/ZoomNeXt" target="_blank"><button class="link-button"><span>Code</span></button></a>
@@ -180,6 +250,7 @@
             <b>Hierarchical Graph Interaction Transformer with Dynamic Token Clustering for Camouflaged Object Detection</b><br>
             Siyuan Yao, Hao Sun, <span style = "text-decoration:underline;">Tian-Zhu Xiang</span>, Xiao Wang, Xiaochun Cao<br>
             <i>IEEE Transactions on Image Processing (TIP)</i>, 2024<br>
+            <p style="line-height:2"></p>
             <a href="https://ieeexplore.ieee.org/abstract/document/10719619" target="_blank"><button class="link-button"><span>PDF</span></button></a>
             <a href="https://arxiv.org/pdf/2408.15020" target="_blank"><button class="link-button"><span>arXiv</span></button></a>
             <a href="https://github.com/Garyson1204/HGINet" target="_blank"><button class="link-button"><span>Code</span></button></a>
@@ -207,6 +278,7 @@
             <b>Collaborative Camouflaged Object Detection: A Large-Scale Dataset and Benchmark</b><br>
             Cong Zhang, Hongbo Bi*, <span style = "text-decoration:underline;">Tian-Zhu Xiang</span>*, Ranwan Wu, Jinghui Tong, Xiufang Wang<br>
             <i>IEEE Transactions on Neural Networks and Learning Systems (TNNLS)</i>, 2024<br>
+            <p style="line-height:2"></p>
             <a href="https://ieeexplore.ieee.org/abstract/document/10298243" target="_blank"><button class="link-button"><span>PDF</span></button></a>
             <a href="https://arxiv.org/abs/2310.04253" target="_blank"><button class="link-button"><span>arXiv</span></button></a>
 	          <a href="https://github.com/zc199823/BBNet--CoCOD" target="_blank"><button class="link-button"><span>Code</span></button></a>
@@ -235,7 +307,7 @@
       
       <h3><a>2023</a></h3>
       <!-- <br><a><strong>2023</strong></a><br> -->
-      <ul>
+      <ul class="body-items">
         
         <li>
           <p>
@@ -357,8 +429,8 @@ year={2023},}
 
 
       <h3><a>2022</a></h3>
-      <ul>
-        
+
+      <ul class="body-items">
         <li>
           <p>
             <b>TCNet: Co-Salient Object Detection via Parallel Interaction of Transformers and CNNs</b><br>
@@ -596,7 +668,8 @@ year={2022}
 
       <h3><a>Before 2021</a></h3>
       <!-- <br><a><strong>Before 2021</strong></a><br> -->
-      <ul>
+
+      <ul class="body-items">
         <li>
           <p>
             <b>MVDI25K: A Large-scale Dataset of Microscopic Vaginal Discharge Images</b><br>

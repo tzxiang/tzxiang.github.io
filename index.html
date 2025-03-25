@@ -10,6 +10,11 @@
     <!-- <link href="static/bootstrap/css/bootstrap.css" rel="stylesheet"> -->
     <!-- <link href="static/xin.css" rel="stylesheet"> -->
     
+    <!-- FontAwesome icon -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <!-- Academicons icon (for Google Scholar icon) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.2/css/academicons.min.css" rel="stylesheet">
+    
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -43,7 +48,59 @@
     ul.social-icons li a {
             border: none;
     }
+
+    .body-text {
+      font-family: montserrat, sans-serif; 
+      font-weight: lighter;               
+      color: #333;                     
+      /* line-height: 1.6; 行高，调整行间距; font-size: 18px; */
+    }
   </style>
+  
+
+  <style>
+    /* 父容器 - 居中对齐 */
+    .container {
+      display: flex;          /* 使用 Flexbox 布局 */
+      flex-direction: column;     /* 垂直方向排列 */
+      justify-content: center; /* 水平居中 */
+      align-items: center;     /* 垂直居中 */
+      height: 0vh;          /* 使内容垂直居中，按需调整 */
+      text-align: center;         /* 确保文本也水平居中 */
+    }
+
+    /* 图片样式 */
+    .image {
+      max-width: 300px;          /* 设置图片最大宽度 */
+      border-radius: 12px;       /* 图片圆角效果 */
+      margin-bottom: 20px;       /* 图片与图标的间距 */
+    }
+
+    /* 图标列表 - 设置间距和样式 */
+    .network-icon {
+      list-style: none;
+      display: flex; /* 使用 Flexbox 实现横向排列 */
+      gap: 10px; /* 图标间距 */
+      padding: 0;
+    }
+
+    .network-icon li {
+      display: inline-block;
+    }
+
+    .big-icon {
+      font-size: 23px; /* 调整图标大小 */
+      color: #333; /* 图标颜色 */
+      transition: color 0.3s;
+    } 
+
+    .big-icon:hover {
+      color: #0073e6; /* 悬停时的颜色 */
+    }
+
+
+  </style>
+
 
 
   <body>
@@ -62,7 +119,7 @@
     <nav>
 			<ul>
 				<br>
-				<li style="float:left"><a href="index.html" style="color: #999; font-size:18px; font-family: Montserrat"><strong>Tian-Zhu Xiang</strong></a></li>
+				<li style="float:left"><a href="index.html" style="color: #999; font-size:20px; font-family: Montserrat"><strong>Tian-Zhu Xiang</strong></a></li>
 				<li style="float:right"><a href="./publication.html">Publications</a></li>
 				<li style="float:right"><a href="index.html">Home</a></li>
         <br><br><br><br>
@@ -86,12 +143,13 @@
             </div>
           </tr> -->
           <tr>
-            <td width="75%"> <!--width="650"-->
+            <td width="70%"> <!--width="650"-->
               <!-- <div id="toptitle">
                 <h1 style="color: #000080; border-bottom: 0.5px dotted rgba(105, 105, 103, 0.6);">Tian-Zhu Xiang</h1>
               </div>  --> 
-              <p style="color: black; font-size:26">About</p>  <!--#4F6071-->
-              <p style="font-family: sans-serif;font-weight: lighter;font-size: 15px;">
+              <p style="color: black; font-size:2em; font-family: montserrat,sans-serif; font-weight: lighter;">About</p>  <!--#4F6071-->
+
+              <p style="font-family: sans-serif;font-weight: lighter; font-size: 16px;">
                 Tian-Zhu Xiang is working as a researcher and Technical Manager of Applied AI at <a href="https://www.bayanat.ai/" style="color: rgba(71,92,102,1);"><u>Space42</u></a>. 
                 Before that, he was a researcher at Inception Institute of Artificial Intelligence (IIAI). 
                 <!-- working with <a href="https://scholar.google.com/citations?user=4STFC1AAAAAJ&hl=en" style="color: rgba(71,92,102,1);"><u>Dr. Fan Zhu</u></a> and <a href="https://scholar.google.com/citations?user=z84rLjoAAAAJ&hl=zh-CN" style="color: rgba(71,92,102,1);"><u>Prof. Ling Shao</u></a>. -->
@@ -102,8 +160,9 @@
                 His research mainly focuses on computer vision, remote sensing and medical image analysis. Specifically, he is interested in camouflaged scene understanding, visual saliency, medical image segmentation and remote sensing image analysis.
                 <!--His research interests includes computer vision, remote sensing and medical image analysis.-->
               </p>
+
               <!--<h3 style="padding-top:-5px"></h3>-->
-              <p style="padding-top:-5px"></p>
+              <!-- <p style="padding-top:-5px"></p>
               <object id="object" data="assets/envelope.svg" width="15" height="15" type="image/svg+xml"></object> &nbsp;
               <a href="mailto:tianzhu.xiang19@gmail.com">tianzhu.xiang19@gmail.com</a>
               &nbsp; &nbsp; &nbsp;
@@ -114,7 +173,7 @@
               <a href="https://www.researchgate.net/profile/Tian-Zhu-Xiang" target="_blank">ResearchGate</a>
               &nbsp; &nbsp; &nbsp;
               <object id="object" data="assets/github.svg" width="15" height="15" type="image/svg+xml"></object> &nbsp;
-              <a href="https://github.com/visionxiang" target="_blank">Github</a> 
+              <a href="https://github.com/visionxiang" target="_blank">Github</a>  -->
 
               <!-- <h4 style="padding-top:-5px"></h4>
               <div class="navbar-collapse collapse">
@@ -132,7 +191,16 @@
               <img src="./images/xiang.jpeg" style="border:0" width="120">
             </td> -->
             <td>
-              <img src="./images/xiang-potrait.png" style="border-style: none; border:.5rem solid rgba(255,255,255,.2); border-radius:50%; padding-left: 40px;" width="70%" />
+              <div class="container">
+                <img src="./images/xiang-potrait.png" style="border-style: none; border:.5rem solid rgba(255,255,255,.2); border-radius:50%; padding-left: 0px;" width="45%">
+            
+                <ul class="network-icon" aria-hidden="true">
+                  <li><a href="mailto:tianzhu.xiang19@gmail.com" aria-label="envelope"><i class="fas fa-envelope big-icon"></i></a></li>
+                  <li><a href="https://github.com/visionxiang" target="_blank" rel="noopener" aria-label="github"><i class="fab fa-github big-icon"></i></a></li>
+                  <li><a href="https://scholar.google.com/citations?user=5uQEWX0AAAAJ&hl=en" target="_blank" rel="noopener" aria-label="google-scholar"><i class="ai ai-google-scholar big-icon"></i></a></li>
+                  <li><a href="https://www.researchgate.net/profile/Tian-Zhu-Xiang" target="_blank" rel="noopener" aria-label="researchgate"><i class="fab fa-researchgate big-icon"></i></a></li>
+                </ul>
+              </div>
             </td>  <!--xiang.jpeg-->
           </tr>
         </tbody>
@@ -140,13 +208,12 @@
 
 
 
-
       <!-- News -->
-      <h2 style="font-family: sans-serif; font-size: 1.5em;"> 
+      <h2 style="font-family: montserrat,sans-serif; font-size: 2em; font-weight: lighter;"> 
         <a id="News" class="anchor" href="#News" style="color:black">News</a> 
       </h2>
 
-      <div style="height:160px; overflow-x:hidden;">
+      <div style="height:160px; overflow-x:hidden; font-family: montserrat,sans-serif;">
         <ul>
           <li><p>(09/2024) One paper for COD is accepted to <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=83" target="_blank" style="color: black"><u>TIP</u></a>.</p></li>
           <li><p>(06/2024) One paper for (V-)COD is accepted to <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=34" target="_blank" style="color: black"><u>TPAMI</u></a>.</p></li>
@@ -170,17 +237,18 @@
 
       
 
-      
+  
        
       <!-- Research Interests -->
-      <h2 style="font-family: sans-serif; font-size: 1.5em;"> 
+      <h2 style="font-family: montserrat,sans-serif; font-size: 2em; font-weight: lighter;"> 
         <a id="Interests" class="anchor" href="#Interests" style="color:black">Research Interests</a> 
       </h2>
+
       
-      <ul>
+      <ul class="body-text">
         <li>
           <p>
-           <strong>Object Detection:</strong> <a href="https://github.com/visionxiang/awesome-camouflaged-object-detection" style="color: black"><u>Camouflaged Object Detection (COD)</u></a>, Industrial Anomaly Detection<br>
+           <strong>Object Detection:</strong> <a href="https://github.com/visionxiang/awesome-camouflaged-object-detection" style="color: black;"><u>Camouflaged Object Detection (COD)</u></a>, Industrial Anomaly Detection<br>
           </p>
         </li>
         <li>
@@ -214,11 +282,12 @@
       
       
       <!-- Publications -->
-      <h2 style="font-family: sans-serif; font-size: 1.5em;"> 
+      <h2 style="font-family: montserrat, sans-serif; font-size: 2em; font-weight: lighter;"> 
         <a id="Publications" class = "anchor" href="#Publications" style="color:black">Selected Publications</a> | <a href="./publication.html" style="color:#527bbd">All Paper List</a>
       </h2>
-      <p>You can also find the full list on <a href="https://scholar.google.com/citations?hl=zh-CN&user=5uQEWX0AAAAJ">Google Scholar</a>. *: Corresponding, <sup>†</sup>Equal contributions.</p>
-      
+
+      <p style="font-family: montserrat,sans-serif; font-weight: lighter;">You can also find the full list on <a href="https://scholar.google.com/citations?user=5uQEWX0AAAAJ&hl=en">Google Scholar</a>. *: Corresponding, <sup>†</sup>Equal contributions.</p>
+
       <!-- Noted that best size of thumbnail img is width/height=11/9, <del></del>-->
 
       <table cellpadding="10" width="100%" style="border-collapse:collapse;border:none;">
@@ -228,14 +297,16 @@
             <img src="thumbnails/2024zoomnext1.png" style="border-style: none" width="100%" />
           </td>
           <td width="82%" valign="top">
-            <p style="color:black;font-size:14px"> 
+            <p style="color:black;font-size:14px; line-height: 1.5;"> 
               <b>ZoomNeXt: A Unified Collaborative Pyramid Network for Camouflaged Object Detection</b><br>
               Youwei Pang<sup>†</sup>, Xiaoqi Zhao<sup>†</sup>, <span style = "text-decoration:underline;">Tian-Zhu Xiang</span><sup>†</sup>, Lihe Zhang, Huchuan Lu<br>
               <i>IEEE Transactions on Pattern Analysis and Machine Intel ligence (TPAMI)</i>, 2024<br>
+              <p style="line-height:10%"></p>
               <a href="https://ieeexplore.ieee.org/document/10568374" target="_blank"><button class="link-button"><span>PDF</span></button></a>
               <a href="https://arxiv.org/abs/2310.20208" target="_blank"><button class="link-button"><span>arXiv</span></button></a>
               <a href="https://github.com/lartpang/ZoomNeXt" target="_blank"><button class="link-button"><span>Code</span></button></a>
               <a href="javascript:toggleblock('Pang2024ZoomNeXt_bib')"><button class="link-button"><span>BibTex</span></button></a>
+              <p style="line-height:10%"></p>
               <div class="paper" id="Pang2024ZoomNeXt">
                 <bibtext xml:space="preserve" id="Pang2024ZoomNeXt_bib" style="font-size:12px"><pre> 
 @ARTICLE{Pang2024ZoomNeXt,
@@ -261,14 +332,16 @@ doi={10.1109/TPAMI.2024.3417329}}
             <img src="thumbnails/2024hginet.png" style="border-style: none" width="100%" />
           </td>
           <td width="82%" valign="top">
-            <p style="color:black;font-size:14px"> 
+            <p style="color:black;font-size:14px; line-height: 1.5;"> 
               <b>Hierarchical Graph Interaction Transformer with Dynamic Token Clustering for Camouflaged Object Detection</b><br>
               Siyuan Yao, Hao Sun, <span style = "text-decoration:underline;">Tian-Zhu Xiang</span>, Xiao Wang, Xiaochun Cao<br>
               <i>IEEE Transactions on Image Processing (TIP)</i>, 2024<br>
+              <p style="line-height:10%"></p>
               <a href="https://ieeexplore.ieee.org/abstract/document/10719619" target="_blank"><button class="link-button"><span>PDF</span></button></a>
               <a href="https://arxiv.org/pdf/2408.15020" target="_blank"><button class="link-button"><span>arXiv</span></button></a>
               <a href="https://github.com/Garyson1204/HGINet" target="_blank"><button class="link-button"><span>Code</span></button></a>
               <a href="javascript:toggleblock('yao2024hierarchical_bib')"><button class="link-button"><span>BibTex</span></button></a>
+              <p style="line-height:10%"></p>
               <div class="paper" id="yao2024hierarchical">
                 <bibtext xml:space="preserve" id="yao2024hierarchical_bib" style="font-size:12px"><pre> 
 @ARTICLE{yao2024hierarchical,
@@ -294,14 +367,16 @@ doi={10.1109/TIP.2024.3475219}}
             <img src="thumbnails/2024cocod.png" style="border-style: none" width="100%" />
           </td>
           <td width="82%" valign="top">
-            <p style="color:black;font-size:14px"> 
+            <p style="color:black;font-size:14px; line-height: 1.5;"> 
               <b>Collaborative Camouflaged Object Detection: A Large-Scale Dataset and Benchmark</b><br>
               Cong Zhang, Hongbo Bi*, <span style = "text-decoration:underline;">Tian-Zhu Xiang</span>*, Ranwan Wu, Jinghui Tong, Xiufang Wang<br>
               <i>IEEE Transactions on Neural Networks and Learning Systems (TNNLS)</i>, 2024<br>
+              <p style="line-height:10%"></p>
               <a href="https://ieeexplore.ieee.org/abstract/document/10298243" target="_blank"><button class="link-button"><span>PDF</span></button></a>
               <a href="https://arxiv.org/abs/2310.04253" target="_blank"><button class="link-button"><span>arXiv</span></button></a>
               <a href="https://github.com/zc199823/BBNet--CoCOD" target="_blank"><button class="link-button"><span>Code</span></button></a>
               <a href="javascript:toggleblock('zhang2024cocod_bib')"><button class="link-button"><span>BibTex</span></button></a>
+              <p style="line-height:10%"></p>
               <div class="paper" id="zhang2024cocod">
                 <bibtext xml:space="preserve" id="zhang2024cocod_bib" style="font-size:12px"><pre> 
 @ARTICLE{zhang2024cocod,
@@ -327,7 +402,7 @@ doi={10.1109/TNNLS.2023.3317091}}
             <img src="thumbnails/2023fspnet.png" style="border-style: none" width="100%" />
           </td>
           <td width="82%" valign="top">
-            <p style="color:black;font-size:14px"> 
+            <p style="color:black;font-size:14px; line-height: 1.5;"> 
               <b>Feature Shrinkage Pyramid for Camouflaged Object Detection with Transformers</b><br>
               Zhou Huang<sup>†</sup>, Hang Dai<sup>†</sup>, <span style = "text-decoration:underline;">Tian-Zhu Xiang</span>*, Shuo Wang, Huai-Xin Chen, Jie Qin, and Huan Xiong<br>
               <i>IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)</i>, 2023<br>
@@ -359,7 +434,7 @@ year      = {2023}
             <img src="thumbnails/2023icra.jpeg" style="border-style: none" width="100%" />
           </td>
           <td width="82%" valign="top">
-            <p style="color:black;font-size:14px"> 
+            <p style="color:black;font-size:14px; line-height: 1.5;"> 
               <b>Scene-level Point Cloud Colorization with Semantics-and-geometry-aware Networks</b><br>
               Rongrong Gao, <span style = "text-decoration:underline;">Tian-Zhu Xiang</span>, Chenyang Lei, Jaesik Park, Qifeng Chen<br>
               <i>IEEE International Conference on Robotics and Automation (ICRA)</i>, 2023<br>
@@ -390,7 +465,7 @@ year={2023},
             <img src="thumbnails/2023MCLL.png" style="border-style: none" width="100%" />
           </td>
           <td width="82%" valign="top">
-            <p style="color:black;font-size:14px"> 
+            <p style="color:black;font-size:14px; line-height: 1.5;"> 
               <b>Memory-aided Contrastive Consensus Learning for Co-salient Object Detection</b><br>
               Peng Zheng, Jie Qin*, Shuo Wang, <span style = "text-decoration:underline;">Tian-Zhu Xiang</span>, Huan Xiong*<br>
               <i>AAAI Conference on Artificial Intelligence (AAAI)</i>, 2023<br>
@@ -422,7 +497,7 @@ year={2023},
             <img src="thumbnails/2022TCNet.png" style="border-style: none" width="100%" />
           </td>
           <td width="85%" valign="top">
-            <p style="color:black;font-size:14px"> 
+            <p style="color:black;font-size:14px; line-height: 1.5;"> 
               <b>TCNet: Co-Salient Object Detection via Parallel Interaction of Transformers and CNNs</b><br>
               Yanliang Ge, Qiao Zhang, <span style = "text-decoration:underline;">Tian-Zhu Xiang</span><sup>*</sup>, Cong Zhang, Jing Zhang, Hongbo Bi*<br>
               <i>IEEE Transactions on Circuits and Systems for Video Technology (TCSVT)</i>, 2022<br>           
@@ -455,7 +530,7 @@ publisher={IEEE}
             <img src="thumbnails/2022PRHINet.png" style="border-style: none" width="100%" />
           </td>
           <td width="82%" valign="top">
-            <p style="color:black;font-size:14px"> 
+            <p style="color:black;font-size:14px; line-height: 1.5;"> 
             <b>Cross-modal Hierarchical Interaction Network for RGB-D Salient Object Detection</b><br>
             Hongbo Bi, Ranwan Wu, Ziqi Liu, Huihui Zhu, Cong Zhang, <span style = "text-decoration:underline;">Tian-Zhu Xiang</span>*<br>
             <i>Pattern Recognition</i>, 2022<br>
@@ -487,7 +562,7 @@ publisher={Elsevier}
             <img src="thumbnails/2022zeroshot.png" style="border-style: none" width="100%" />
           </td>
           <td width="82%" valign="top">
-            <p style="color:black;font-size:14px"> 
+            <p style="color:black;font-size:14px; line-height: 1.5;"> 
             <b>Leveraging Balanced Semantic Embedding for Generative Zero-Shot Learning</b><br>
             Guo-Sen Xie*, Xu-Yao Zhang, <span style = "text-decoration:underline;">Tian-Zhu Xiang</span>*, Fang Zhao, Zheng Zhang, Ling Shao, Xuelong Li<br>
             <i>IEEE Transactions on Neural Networks and Learning Systems (TNNLS)</i>, 2022<br>
@@ -519,7 +594,7 @@ doi={10.1109/TNNLS.2022.3208525}
             <img src="thumbnails/2022PSNet.png" style="border-style: none" width="100%" />
           </td>
           <td width="82%" valign="top">
-            <p style="color:black;font-size:14px"> 
+            <p style="color:black;font-size:14px; line-height: 1.5;"> 
             <b>PSNet: Parallel Symmetric Network for RGB-T Salient Object Detection</b><br> 
             Hongbo Bi, Ranwan Wu, Ziqi Liu, Jiayuan Zhang, Cong Zhang, <span style = "text-decoration:underline;">Tian-Zhu Xiang</span>*, Xiufang Wang*<br>
             <i>Neurocomputing</i>, 2022<br>
@@ -552,7 +627,7 @@ doi = {https://doi.org/10.1016/j.neucom.2022.09.052},
             <img src="thumbnails/2022SBA2.png" style="border-style: none" width="100%" />
           </td>
           <td width="82%" valign="top">
-            <p style="color:black;font-size:14px">
+            <p style="color:black;font-size:14px; line-height: 1.5;"> 
               <b>Scribble-based Boundary-aware Network for Weakly Supervised Salient Object Detection in Remote Sensing Images</b><br>
               Zhou Huang, <span style = "text-decoration:underline;">Tian-Zhu Xiang</span>, Huai-Xin Chen*, Hang Dai<br>
               <i>ISPRS Journal of Photogrammetry and Remote Sensing</i>, 2022<br>       
@@ -586,7 +661,7 @@ doi={https://doi.org/10.1016/j.isprsjprs.2022.07.014}
             <img src="thumbnails/2022TVS.png" style="border-style: none" width="100%" />
           </td>
           <td width="82%" valign="top">
-            <p style="color:black;font-size:14px">
+            <p style="color:black;font-size:14px; line-height: 1.5;"> 
               <b>Trichomonas Vaginalis Segmentation in Microscope Images</b><br>
               Lin Li, Jingyi Liu, Shuo Wang, Xunkun Wang*, <span style = "text-decoration:underline;">Tian-Zhu Xiang</span>*<br>
               <i>Medical Image Computing and Computer Assisted Interventions (MICCAI)</i>, 2022<br>
@@ -616,7 +691,7 @@ year={2022}
             <img src="thumbnails/2022bgnet.png" style="border-style: none" width="100%" />
           </td>
           <td width="85%" valign="top">
-            <p style="color:black;font-size:14px">
+            <p style="color:black;font-size:14px; line-height: 1.5;"> 
             <b>Boundary-Guided Camouflaged Object Detection</b><br>
             Yujia Sun, Shuo Wang, Chenglizhao Chen, <span style = "text-decoration:underline;">Tian-Zhu Xiang</span>*<br>
             <i>International Joint Conference on Artificial Intelligence (IJCAI)</i>, 2022<br>
@@ -647,7 +722,7 @@ year={2022}
             <img src="thumbnails/2022Zoomnet.png" style="border-style: none" width="100%" />
           </td>
           <td width="82%" valign="top">
-            <p style="color:black;font-size:14px">
+            <p style="color:black;font-size:14px; line-height: 1.5;"> 
             <b>Zoom In and Out: A Mixed-scale Triplet Network for Camouflaged Object Detection</b><br>
             Youwei Pang, Xiaoqi Zhao, <span style = "text-decoration:underline;">Tian-Zhu Xiang</span>, Lihe Zhang* and Huchuan Lu<br>
             <i>IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)</i>, 2022<br>     
@@ -679,7 +754,7 @@ year={2022}
             <img src="thumbnails/2019MiniUAVRS.png" style="border-style: none" width="100%" />
           </td>
           <td width="82%" valign="top">
-            <p style="color:black;font-size:14px">
+            <p style="color:black;font-size:14px; line-height: 1.5;"> 
               <b>Mini-Unmanned Aerial Vehicle-Based Remote Sensing: Techniques, applications, and prospects</b><br>
               <span style = "text-decoration:underline;">Tian-Zhu Xiang</span>, Gui-Song Xia*, Liangpei Zhang<br>
               <i>IEEE Geoscience and Remote Sensing Magazine (GRSM)</i>, 2019.<br>       
@@ -711,7 +786,7 @@ doi={10.1109/MGRS.2019.2918840}}
             <img src="thumbnails/2018Stitching.png" style="border-style: none" width="100%" />
           </td>
           <td width="82%" valign="top">
-            <p style="color:black;font-size:14px">
+            <p style="color:black;font-size:14px; line-height: 1.5;"> 
               <b>Image stitching by line-guided local warping with global similarity constraint</b><br>
               <span style = "text-decoration:underline;">Tian-Zhu Xiang</span>, Gui-Song Xia*, Xiang Bai, Liangpei Zhang<br>
               <i>Pattern Recognition</i>, 2018.<br>   
@@ -743,7 +818,7 @@ publisher={Elsevier}
             <img src="thumbnails/2015fusion.png" style="border-style: none" width="100%" />
           </td>
           <td width="82%" valign="top">
-            <p style="color:black;font-size:14px">
+            <p style="color:black;font-size:14px; line-height: 1.5;"> 
               <b>A Fusion Algorithm for Infrared and Visible Images Based on Adaptive Dual-channel Unit-linking PCNN in NSCT Domain</b><br>
               <span style = "text-decoration:underline;">Tian-Zhu Xiang</span>, Li Yan*, Rongrong Gao<br>
               <i>Infrared Physics & Technology</i>, 2015.<br>
@@ -805,59 +880,61 @@ publisher={Elsevier}
 
 
       <!--Services/Activities-->
-      <h2 style="font-family: sans-serif; font-size: 1.5em;"> 
+      <h2 style="font-family: montserrat,sans-serif; font-size: 2em; font-weight: lighter;"> 
         <a id="Service" class="anchor" href="#Service" style="color: black">Service</a> 
       </h2>
-      <p>Journal Reviewer:</p>
-      <ul>
+
+      <p style="font-family: montserrat,sans-serif;line-height: 2;">Journal Reviewer:</p>
+      <ul class="body-text">
         <li><p>IEEE Transactions on Pattern Analysis and Machine Intelligence (IEEE T-PAMI)</p></li>
-	<li><p>IEEE Transactions on Image Processing (IEEE T-IP)</p></li>
-	<li><p>IEEE Transactions on Neural Networks and Learning Systems (IEEE T-NNLS)</p></li>
-	<li><p>IEEE Transactions on Multimedia (IEEE T-MM)</p></li>
-	<li><p>IEEE Transactions on Circuits and Systems for Video Technology (IEEE T-CSVT)</p></li>
-	<li><p>IEEE Transactions on Geoscience and Remote Sensing (IEEE TGRS)</p></li>
-	<li><p>ISPRS Journal of Photogrammetry and Remote Sensing</p></li>
+	      <li><p>IEEE Transactions on Image Processing (IEEE T-IP)</p></li>
+        <li><p>IEEE Transactions on Neural Networks and Learning Systems (IEEE T-NNLS)</p></li>
+        <li><p>IEEE Transactions on Multimedia (IEEE T-MM)</p></li>
+        <li><p>IEEE Transactions on Circuits and Systems for Video Technology (IEEE T-CSVT)</p></li>
+        <li><p>IEEE Transactions on Geoscience and Remote Sensing (IEEE TGRS)</p></li>
+        <li><p>ISPRS Journal of Photogrammetry and Remote Sensing</p></li>
         <li><p>International Journal of Applied Earth Observation and Geoinformation (JAG)</p></li>
-	<li><p>Pattern Recognition (PR)</p></li>
-	<li><p>Information Fusion</p></li>
-	<li><p>Neural Networks (NN)</p></li>
-	<li><p>SCIENCE CHINA Information Sciences</p></li>
-	<li><p>……</p></li>
+        <li><p>Pattern Recognition (PR)</p></li>
+        <li><p>Information Fusion</p></li>
+        <li><p>Neural Networks (NN)</p></li>
+        <li><p>SCIENCE CHINA Information Sciences</p></li>
+        <li><p>……</p></li>
 	
         <!--
-	<li><p>IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing (IEEE J-STARS)</p></li>
+	      <li><p>IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing (IEEE J-STARS)</p></li>
         <li><p>Neurocomputing</p></li>
-	<li><p>Computer Graphics Forum</p></li>
+	      <li><p>Computer Graphics Forum</p></li>
         <li><p>Applied Intelligence</p></li>
-	<li><p>Information Processing and Management</p></li>
-	<li><p>Computer Vision and Image Understanding (CVIU)</p></li>
+	      <li><p>Information Processing and Management</p></li>
+	      <li><p>Computer Vision and Image Understanding (CVIU)</p></li>
         <li><p>Pattern Recognition Letters</p></li>
         <li><p>CAAI Artificial Intelligence Research (CAAI AIR)</p></li>
         <li><p>Engineering Applications of Artificial Intelligence</p></li>
-	<li><p>Signal Processing: Image Communication</p></li> 
-	<li><p>Expert Systems with Applications</p></li> 
-	<li><p>Knowledge-Based Systems</p></li> 
-	<li><p>SCIENCE CHINA Information Sciences</p></li> -->
+        <li><p>Signal Processing: Image Communication</p></li> 
+        <li><p>Expert Systems with Applications</p></li> 
+        <li><p>Knowledge-Based Systems</p></li> 
+        <li><p>SCIENCE CHINA Information Sciences</p></li> -->
       </ul>
-      <p>Program Committee: </p>
-        <ul>
-	  <li><p>IEEE/CVF Computer Vision and Pattern Recognition Conference (CVPR), 2023-2025</p></li>
-          <li><p>IEEE/CVF International Conference on Computer Vision (ICCV), 2023-2025</p></li>
-	  <li><p>European Conference on Computer Vision (ECCV), 2024</p></li>
-          <li><p>AAAI Conference on Artificial Intelligence (AAAI), 2023-2025</p></li>
-          <li><p>International Joint Conferences on Artificial Intelligence (IJCAI), 2021</p></li>
-	  <li><p>European Conference on Artificial Intelligence (ECAI), 2023</p></li>
-	  <!--<li><p>Asian Conference on Computer Vision (ACCV), 2024</p></li>-->
-        </ul>
+      
+      <p style="font-family: montserrat,sans-serif;line-height: 2;">Program Committee: </p>
+      <ul class="body-text">
+	      <li><p>IEEE/CVF Computer Vision and Pattern Recognition Conference (CVPR), 2023-2025</p></li>
+        <li><p>IEEE/CVF International Conference on Computer Vision (ICCV), 2023-2025</p></li>
+        <li><p>European Conference on Computer Vision (ECCV), 2024</p></li>
+        <li><p>AAAI Conference on Artificial Intelligence (AAAI), 2023-2025</p></li>
+        <li><p>International Joint Conferences on Artificial Intelligence (IJCAI), 2021</p></li>
+	      <li><p>European Conference on Artificial Intelligence (ECAI), 2023</p></li>
+	      <!--<li><p>Asian Conference on Computer Vision (ACCV), 2024</p></li>-->
+      </ul>
         
  
 
       <!-- Education -->
       <!--
-      <h2> 
+      <h2 style="font-family: montserrat, sans-serif; font-size: 2em; font-weight: lighter;"> 
         <a id="Education" class="anchor" href="#Education">Education</a> 
       </h2>
-      <ul>
+      <ul class="body-text">
         <li>Sep. 2015 - Jun. 2019, Ph.D., LIESMARS, Wuhan University</li>
         <li>Sep. 2012 - Jun. 2015, M.Sc., School of Geodesy & Geomatics, Wuhan University</li>
         <li>Sep. 2008 - Jun. 2012, B.Sc., School of Geodesy & Geomatics, Wuhan University</li>
