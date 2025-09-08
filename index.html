@@ -101,23 +101,26 @@
   </style>
 
   <style>
-    /* 容器样式 */
+    /* 地图容器样式 */
     #map-container {
-      position: fixed; /* 固定在页面左下角 */
-      bottom: 20px;   /* 距离底部 20px */
-      left: 200px;     /* 距离左侧 20px */
       width: 300px;   /* 自定义宽度 */
       /* height: 200px; */ /* 自定义高度 */
+	  margin: 20px;   /* 外边距，控制与周围内容的间距 */
       overflow: hidden; /* 防止内容溢出 */
       border: 1px solid #ccc; /* 可选：添加边框 */
       background-color: #fff; /* 可选：背景色 */
-      /* z-index: 1000; */ /* 确保在其他元素之上 */
     }
     /* 控制地图 iframe 或其他生成元素的大小 */
     #map-container iframe {
       width: 100% !important; /* 强制填满容器宽度 */
       height: 100% !important; /* 强制填满容器高度 */
     }
+	/* 确保地图在页面底部左下角 */
+    .footer-map {
+      display: flex;
+      justify-content: flex-start; /* 左对齐 */
+      align-items: flex-end; /* 底部对齐 */
+	}
   </style>
 
 
@@ -1001,12 +1004,15 @@ publisher={Elsevier}
     </div>
 
     <!--visit-->
-	<div id="map-container">
-		<script type="text/javascript" id="mapmyvisitors" src="//mapmyvisitors.com/map.js?d=CcJJZc0vzlqsOCSs5oAETd98NeFwDJZ6Rprx6oCouxA&cl=ffffff&w=a"></script>
+	<div class="footer-map">
+		<div id="map-container">
+			<script type="text/javascript" id="mapmyvisitors" src="//mapmyvisitors.com/map.js?d=CcJJZc0vzlqsOCSs5oAETd98NeFwDJZ6Rprx6oCouxA&cl=ffffff&w=a"></script>
+		</div>
 	</div>
 	  
   </body>
 </html>
+
 
 
 
